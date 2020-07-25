@@ -1,0 +1,303 @@
+*{
+	font-family: arial;
+}
+.container{
+	display: grid;
+	grid-template-columns: 300px 1fr 1fr;
+	grid-template-rows:  100px repeat(2, 280px);
+	grid-template-areas: "nav	header	header"
+						 "nav   main    main"
+						 "nav	main	main";
+}
+/*header*/
+.container header{
+	grid-area: header;
+}
+
+h1,body{
+	margin: 0;
+}
+h1{
+	margin: 0px;
+	font-size: 45px;
+	background-color: rgba(50, 71, 100 );
+	text-align: center;
+	color:white;
+}
+h2{
+	font-size: 20px;
+	color:rgb(50, 71, 100 );
+	padding: 3px;
+	text-align: center;
+	background-color: white;
+	border:1px solid black;
+	border-left:0px ;
+	border-right: 0px;
+	margin-top: 0px;
+}
+/*navbar*/
+.container nav{
+	grid-area: nav;
+	background-color: gray;
+	background-image: url(pasto_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-right: 2px solid black;
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 300px;
+}
+
+img[alt="logo_NYSL"]{
+	height:200px;
+	width:200px ;
+	padding:20px 20px 10px 50px;
+
+}
+.btn{
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	margin: 20px 30px 20px 30px ;	
+	border: 1px solid black;
+	padding: 6px 0px 6px 0px;
+	text-align: center;
+	background-color: rgba(4, 5, 5, 0.3);
+	
+}
+ .subrayado ,.btn:hover{
+	background-color: rgba(4, 5, 5, 0.7);
+	transform: scale(1.1);
+	border:1px solid white;
+}
+
+/*main*/
+.container main{
+	grid-area: main;
+	margin: 10px 40px 5px 40px;
+	align-self: start;
+}
+.icon{
+	font-size: 70px;
+	padding: 10px;
+	color: #99A3A4;
+}
+/*main about*/
+#about article{
+	padding: 20px;
+	text-align: center;
+
+}
+#about  h3{
+	text-align: center;
+	padding: 8px;
+	color:#24CC4F;
+	background-color:#F4F6F6;
+	font-size: 20px;
+	margin: 5px 0px 5px 0px;
+}
+main>div{
+	text-align: center;
+}
+div>p>a{
+	font-size: 28px;
+	padding: 20px;
+	margin: 20px;
+}
+p{
+	font-size: 17px;
+}
+/*main home-contact*/
+main a{
+	color:rgb(22, 120, 47);
+	text-decoration:none;
+}
+main a:hover{
+	color: gray;
+}
+ol,ul,li {
+	margin: 15px;
+
+}
+ dl dt, h3 {
+	margin: 0px 0px 5px 0px;
+	padding: 5px 0px 10px 0px;
+	font-size: 18px;
+	color:#24CC4F;
+}
+
+.events dl dd{
+	padding: 0px 15px 20px 10px;
+	text-align: justify;	
+}
+/*main gallery*/
+#gallery article:hover{
+	transform: scale(1.2);
+}
+#gallery{
+	margin-top: 50px;
+}
+article img{
+	height:100%;
+	width: 100%;
+	border:1px solid #24CC4F;
+}
+#gallery> .container_gal{
+	display: grid;
+	grid-template-columns: repeat(3,200px);
+	grid-template-rows: repeat(2,200px);
+	grid-gap: 20px;
+	justify-content: center;
+	align-content: center;
+}
+table , tr,th{
+	border-collapse: collapse;
+	border: 2px solid #E5E8E8 ;
+	margin: 20px;
+	text-align: center;
+}
+td{
+	width: 100vw;
+	height: 40px;
+}
+th{
+	width: 100vw;
+	height: 40px;
+	border: 1px solid white;
+	background-color: #24CC4F ; 
+	color: white;
+}
+iframe{
+	margin:0;
+	padding: 10px;
+	width:100%;
+	border: 1px solid black;
+}
+.tabla2>tbody:hover, .tabla1>tbody>tr:hover{
+	background-color: #C5E1A5 ;
+	border: 1px solid white;
+
+}
+/*//REGISTRATION FORM*/
+.container_form{
+	 	color: #5A5A5A;
+	 	border-radius: 20px;
+	 	display: grid;
+	 	grid-template-columns: repeat(2,1fr);
+	 	grid-template-rows: 350px repeat(2,160px)  200px 400px;
+	 	grid-gap: 15px;
+	 	grid-template-areas: "personal_info             personal_info"
+	 						 "Schools                  Schools"
+	 						 "play_positions_left      play_positions_right"
+	 						 "uniform                  uniform"
+	 						 " autorization            autorization";
+}
+ .personal_info{
+ 	background-color: #F4F6F6;
+ 	grid-area: personal_info;
+ 	padding: 0 20px 0 20px;
+
+ }
+ .personal_info input, .personal_info select{
+	 color: #828383 ;
+	background-color: white;
+	padding: 3px;
+	border:0 ;
+	border-radius: 20px;
+	width: 175px;
+	margin: 0;
+	font-size: 15px;
+}
+ input[name="Zip-code"]{
+	width: 80px;
+}
+.Schools{
+	grid-area: Schools;
+	background-color: #F4F6F6;
+ 	padding: 0 30px 0 30px;
+ 	
+
+}
+.personal_info label{
+	background-color: white;
+	padding: 7px;
+	border:1px solid #DCDCDC ;
+	width: 160px;
+	border-radius: 20px;
+	margin-left: 20px;
+
+}
+.Schools label,.uniform label,.autorization label{
+	background-color: white;
+	padding: 7px;
+	border:1px solid #DCDCDC ;
+	border-radius: 20px;
+	width: 190px;
+	margin-left: 80px;
+}
+.Schools select, .uniform select ,.autorization input{
+	 color: #828383 ;
+	background-color: white;
+	padding: 5px;
+	border:0 ;
+	border-radius: 20px;
+	width: 180px;
+	margin: 0;
+	font-size: 15px;
+}
+ .play_positions_left{
+ 	background-color: #F4F6F6;
+ 	grid-area: play_positions_left;
+ }
+ .play_positions_right{
+ 	background-color: #F4F6F6;
+ 	grid-area: play_positions_right;
+ }
+ .play_positions_left label, .play_positions_right label{
+ 	margin-left: 20px;
+ }
+ .uniform{
+ 	background-color: #F4F6F6;
+ 	grid-area: uniform;
+ 	padding: 0 20px 0 20px;
+ }
+
+ #end{
+ 	background:0;
+ 	border:0;
+ 	display: flex;
+ 	margin-left: 5px;
+ }
+
+ .autorization{
+ 	background-color: #F4F6F6;
+ 	grid-area: autorization;
+ 	padding-right: 30px;
+ 	padding: 20px;
+ }
+ .autorization label{
+ 	margin: 20px;
+ }
+ fieldset{
+ 	border: 0;
+ 	margin-top: 20px;
+ }
+ input[type="submit"]{
+ 	background-color: #24CC4F;
+ 	color: white;
+ }
+h5{
+	margin: 0;
+	margin: 20px;
+ 	color: #24CC4F;
+ 	font-size: 20px;
+ 	padding: 5px;
+ 	text-align: center;
+ }
+
+
+
+
+
